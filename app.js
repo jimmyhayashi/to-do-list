@@ -2,6 +2,7 @@
 const express = require('express');
 // Import the checklist router module
 const checklistRouter = require('./src/routes/checklist');
+require('./config/database')
 
 // Create an instance of an Express application
 const app = express();
