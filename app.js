@@ -2,7 +2,6 @@
 const express = require('express');
 const path = require('path');
 
-
 // Import the checklist router module
 const checklistRouter = require('./src/routes/checklist');
 const rootRouter = require('./src/routes/index');
@@ -14,6 +13,8 @@ const app = express();
 
 // Middleware to parse incoming JSON requests
 app.use(express.json());
+
+app.use(express.urlencoded({extended: true}))
 
 app.use(express.static(path.join(__dirname, 'public')));
 
