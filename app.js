@@ -5,6 +5,9 @@ const methodOverride = require('method-override');
 
 // Import the checklist router module
 const checklistRouter = require('./src/routes/checklist');
+const taskRouter = require('./src/routes/task');
+
+
 const rootRouter = require('./src/routes/index');
 
 require('./config/database')
@@ -26,9 +29,8 @@ app.set('view engine', 'ejs');
 
 app.use('/', rootRouter);
 app.use('/checklists', checklistRouter)
-
-// Mount the checklist router at the '/checklists' path
-app.use('/checklists', checklistRouter);
+app.use('/checklists', taskRouter.checklistDependent)
+app.use('/tasks', taskRouter.simple)
 
 // Start the server on port 3000
 app.listen(3000, () => {
