@@ -14,15 +14,12 @@
  <a href="#started">App Routes</a>
 </p>
 
+https://github.com/user-attachments/assets/b54391c2-be14-4770-a18d-1e0e41dbb34f
+
 <h2 id="started">📌 About</h2>
 
 This backend project is developed using Node.js and Express and is designed to manage the creation of notes and user data. It interacts with a MongoDB database to store and retrieve information, providing the necessary API endpoints for creating, editing, and managing both notes and user accounts.
 
-🔗 Part of a Larger Project
-
-This backend service is part of a larger project called Javascript Notes, which includes a frontend built with React. The frontend interacts with this backend to provide a complete note-taking application.
-
-Frontend Repository: [javascript-notes-react](https://github.com/jimmyhayashi/javascript-notes-react.git)
 
 <h2 id="started">🚀 Getting started</h2>
 
@@ -43,30 +40,20 @@ How to clone your project
 git clone https://github.com/jimmyhayashi/javascript-notes-backend.git
 ```
 
-<h3> Environment Variables</h2>
-
-Configure the environment variable in the .env file. This variable will be used for the authentication of the application.
-
-
-```yaml
-JWT_TOKEN={YOUR_KEY_AUTENTICATION}
-```
-
 <h3>Starting</h3>
 
 How to start your project
 
 ```bash
 cd project-name
-npm run start
+npm run dev
 ``````
-
 
 <h2 id="routes">📍 API Endpoints</h2>
 
 Here you can list the main routes of your API, and what are their expected request bodies.
 
-<h4>User Routes</h4>​
+<h4>Checklist Routes</h4>​
 
 | route               | description                                          
 |----------------------|-----------------------------------------------------
@@ -75,18 +62,6 @@ Here you can list the main routes of your API, and what are their expected reque
 | <kbd>PUT /users</kbd>          |  Update the user data
 | <kbd>PUT /users/password</kbd> |  Update the user password
 | <kbd>DELETE /users</kbd>       |  delete user account
-
-
-<h4>Notes Routes</h4>​
-
-| route                  | description                                         |
-|------------------------|-----------------------------------------------------|
-| <kbd>POST /notes</kbd> | Create a new note                                   |
-| <kbd>GET /notes/search</kbd> | Search for notes by query                     |
-| <kbd>GET /notes/:id</kbd> | Retrieve a note by its ID                        |
-| <kbd>GET /notes</kbd> | Retrieve all notes of the authenticated user         |
-| <kbd>PUT /notes/:id</kbd> | Update an existing note by its ID                |
-| <kbd>DELETE /notes/:id</kbd> | Delete a note by its ID                       |
 
 
 <h3 id="get-auth-detail">POST /register</h3>
