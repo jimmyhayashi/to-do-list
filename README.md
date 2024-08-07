@@ -48,7 +48,7 @@ git clone https://github.com/jimmyhayashi/to-do-list.git
 How to start your project
 
 ```bash
-cd project-name
+cd to-do-list
 npm run dev
 ``````
 
